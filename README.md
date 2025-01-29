@@ -16,7 +16,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 
 
-## First Example: Detab Implementation
+## Example - 1 : Detab Implementation
 
 The first example in this repository is a detab program, which replaces tab characters (\t) with spaces to align text at defined tab stops.<br><br>
 
@@ -45,13 +45,13 @@ The first example in this repository is a detab program, which replaces tab char
 ### Usage
 
 1. Clone the repository:
-
+<pre>git clone https://github.com/muhammedceberli/C-Professional-Examples</pre>
 
 2. Compile the program:
-
+<pre>gcc detab.c -o detab.exe</pre>
 
 3. Run the program:
-
+<pre>detab.exe</pre>
 
 4. Enter input and observe the detabbed output.<br><br><br>
 

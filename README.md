@@ -12,7 +12,7 @@ This repository contains a collection of professional C programming examples. Ea
 
 # License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/muhammedceberli/C-Professional-Examples/blob/main/LICENSE) file for details.
 
 
 

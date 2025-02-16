@@ -2,7 +2,7 @@
 	#include <stdbool.h>
 	
 	#define TAB_SIZE	8
-	#define ARRAY_SIZE	30	// Maximum input length is ARRAY_SIZE - 1
+	#define ARRAY_SIZE	1001	// Maximum input length is ARRAY_SIZE - 1
 	
 	int readInputLine( char[], bool* );
 	void entab( char[], int* len );

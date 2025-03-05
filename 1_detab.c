@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 #define TAB_SIZE	8 		/* Defines the number of spaces per tab */
-#define INPUT_SIZE	1001	/* The max length of user input ( including the null terminator ) */
+#define INPUT_SIZE	1001		/* The max length of user input ( including the null terminator ) */
 
 int readUserInput( char[], bool* );
 void expandTabs( char[], char[] );
@@ -16,20 +16,22 @@ int main( int argc, char **argv )
 	
 	while( !isEOF )
 	{
-		printf("\nEnter the input...\n");
+		printf("Enter the input...\n");
 		
 		inputLength = readUserInput( userInput, &isEOF );
 		
 		if( inputLength == INPUT_SIZE )
-			printf("Input truncated to %d characters...\n", INPUT_SIZE - 1);
+			printf("\nInput truncated to %d characters...", INPUT_SIZE - 1);
 			
-		if( inputLength > 0 )
+		if( inputLength )
 		{
 			expandTabs( userInput, expandedOutput );
-			printf("The output :%s\n", expandedOutput);
+			printf("\nThe output :\n%s\n", expandedOutput);
 						
 		}else if( ( inputLength == 0 ) && !isEOF )
-			printf("Empty input...\n");
+			printf("\nEmpty input...\n");
+			
+		printf("\n\n");
 	}	
 	
 	printf("Terminating the application...\n");
@@ -85,25 +87,22 @@ int readUserInput( char input[], bool *isEOF )
 	if((( ch = getchar()) == EOF ))
 	{
 		( *isEOF ) = true;
-		return charCount;
+		return 0;
 		
 	}else if( ch == '\n' )
 		return 0;
 
-	else
-		input[ charCount++ ] = ch;
-	
+	input[ charCount++ ] = ch;	
 	
 	while((( ch = getchar()) != EOF ) && ( ch != '\n' ) && ( charCount < ( INPUT_SIZE - 1 ) ))
 		input[ charCount++ ] = ch;
-
 	
 	input[ charCount ] = '\0';
 	
-	if(( ch != EOF ) && ( ch != '\n' ) && ( charCount == ( INPUT_SIZE - 1 ) ))
+	if(( ch != EOF ) && ( ch != '\n' ))
 		++charCount;
 	
 	while(( ch != '\n' ) && (( ch = getchar()) != EOF ) && ( ch != '\n' ));
 	
 	return charCount;
-} 
+}

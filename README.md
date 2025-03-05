@@ -16,26 +16,26 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 
 
-## Example - 1 : Detab Implementation
+## 🛠 Example - 1 : Detab Implementation
 
 The first example in this repository is a detab program, which replaces tab characters (\t) with spaces to align text at defined tab stops.<br><br>
 
 
-### Features
+### 🛠 Features
 
 - Reads user input and processes it.
 - Expands tab characters into spaces based on TAB_SIZE.
 - Handles various input edge cases.<br><br>
 
 
-### How It Works
+### 📌 How It Works
 
 1. The program reads input from the user.
 2. Tabs are expanded into spaces according to the defined TAB_SIZE.
 3. The processed output is displayed.<br><br>
 
 
-### Code Structure
+### 📂 Code Structure
 
 - getString(): Reads user input, handling buffer limitations and termination conditions.
 - detab(): Replaces tabs with spaces while maintaining correct alignment.

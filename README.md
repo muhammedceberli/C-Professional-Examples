@@ -16,7 +16,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 
 
-## 🛠 Example - 1 : Detab Implementation
+## 🛠 Example_1 - Detab: Ensuring Consistent Text Alignment with Tab Expansion
 
 The detab program replaces tab characters (\t) with spaces to align text at defined tab stops, ensuring consistent formatting.<br><br>
 
@@ -133,9 +133,10 @@ The program consists of three key functions:<br>
 
 ### 🎯 Example Execution
 Input:<br>
-<pre>Hello      world!  This    is   an     example.</pre>
+<pre>Hello      world!  This    is   an     example.</pre><br><br>
 
 
+## 🛠 Example_3 - 
 
 
 

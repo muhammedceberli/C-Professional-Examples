@@ -31,25 +31,25 @@ The detab program replaces tab characters (\t) with spaces to align text at defi
 
 ### 📌 How It Works
 
-1. User Input: The program reads a line of text from standard input.
-2. Tab Expansion: Tabs are replaced with the appropriate number of spaces, preserving alignment.
-3. Output Display: The processed text is printed with consistent spacing.<br><br>
+1. **User Input**: The program reads a line of text from standard input.
+2. **Tab Expansion**: Tabs are replaced with the appropriate number of spaces, preserving alignment.
+3. **Output Display**: The processed text is printed with consistent spacing.<br><br>
 
 
 ### 📂 Code Structure
 The program consists of three key functions:<br>
 
-🔹 readUserInput()
+🔹 **readUserInput()**
 - Reads a line of input while ensuring it does not exceed the buffer limit (INPUT_SIZE).
 - Handles EOF detection and empty input cases.
 - Trims excess characters beyond the buffer size.
 
-🔹 expandTabs()
+🔹 **expandTabs()**
 - Scans the input string and replaces tab characters with spaces.
 - Ensures proper alignment based on TAB_SIZE.
 - Handles cursor position tracking to maintain text structure.
 
-🔹 main()
+🔹 **main()**
 - Manages program execution, calling readUserInput() and expandTabs().
 - Handles user interaction and displays results.
 - Ensures smooth termination upon EOF.<br><br>
@@ -93,26 +93,26 @@ The entab program improves memory efficiency by replacing sequences of spaces wi
 
 ### 📌 How It Works
 
-1. User Input: The program reads a line of text into a fixed-size character array.
-2. Space Detection: It scans for consecutive spaces and tracks tab stop positions.
-3. Tab Replacement: When enough spaces reach a tab stop, they are replaced with a tab (\t), shifting the remaining text accordingly.
-4. Optimized Storage: The updated string takes up less space in the array while maintaining structure.
-5. Output Display: The processed text is printed for verification.<br><br>
+1. **User Input**: The program reads a line of text into a fixed-size character array.
+2. **Space Detection**: It scans for consecutive spaces and tracks tab stop positions.
+3. **Tab Replacement**: When enough spaces reach a tab stop, they are replaced with a tab (\t), shifting the remaining text accordingly.
+4. **Optimized Storage**: The updated string takes up less space in the array while maintaining structure.
+5. **Output Display**: The processed text is printed for verification.<br><br>
 
 
 ### 📂 Code Structure
 The program consists of three key functions:<br>
 
-🔹 getString()
+🔹 **getString()**
 - Reads a line of input while ensuring it stays within the array size limit (ARRAY_SIZE).
 - Handles newline characters, EOF conditions, and empty input cases.
 
-🔹 entab()
+🔹 **entab()**
 - Scans the array to detect spaces and tab stop positions.
 - Replaces spaces with tab characters where possible.
 - Shifts the remaining text efficiently to maintain correctness.
 
-🔹 main()
+🔹 **main()**
 - Controls the execution flow, calling getString() and entab().
 - Manages user interaction and displays results.<br><br>
 

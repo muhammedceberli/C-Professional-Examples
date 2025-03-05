@@ -18,42 +18,63 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## 🛠 Example - 1 : Detab Implementation
 
-The first example in this repository is a detab program, which replaces tab characters (\t) with spaces to align text at defined tab stops.<br><br>
+The detab program replaces tab characters (\t) with spaces to align text at defined tab stops, ensuring consistent formatting.<br><br>
 
 
 ### 🛠 Features
 
-- Reads user input and processes it.
-- Expands tab characters into spaces based on TAB_SIZE.
-- Handles various input edge cases.<br><br>
+✔ Reads and processes user input efficiently.<br>
+✔ Converts tab characters into spaces according to TAB_SIZE.<br>
+✔ Maintains correct text alignment.<br>
+✔ Handles various input edge cases, including long input lines.<br><br>
 
 
 ### 📌 How It Works
 
-1. The program reads input from the user.
-2. Tabs are expanded into spaces according to the defined TAB_SIZE.
-3. The processed output is displayed.<br><br>
+1. User Input: The program reads a line of text from standard input.
+2. Tab Expansion: Tabs are replaced with the appropriate number of spaces, preserving alignment.
+3. Output Display: The processed text is printed with consistent spacing.<br><br>
 
 
 ### 📂 Code Structure
+The program consists of three key functions:<br>
 
-- getString(): Reads user input, handling buffer limitations and termination conditions.
-- detab(): Replaces tabs with spaces while maintaining correct alignment.
-- main(): Controls the program flow and user interaction.<br><br>
+🔹 readUserInput()
+- Reads a line of input while ensuring it does not exceed the buffer limit (INPUT_SIZE).
+- Handles EOF detection and empty input cases.
+- Trims excess characters beyond the buffer size.
 
-  
+🔹 expandTabs()
+- Scans the input string and replaces tab characters with spaces.
+- Ensures proper alignment based on TAB_SIZE.
+- Handles cursor position tracking to maintain text structure.
+
+🔹 main()
+- Manages program execution, calling readUserInput() and expandTabs().
+- Handles user interaction and displays results.
+- Ensures smooth termination upon EOF.<br><br>
+
+
 ### Usage
 
-1. Clone the repository:
+1️⃣ Clone the repository:
 <pre>git clone https://github.com/muhammedceberli/C-Professional-Examples</pre>
 
-2. Compile the program:
+2️⃣ Compile the program:
 <pre>gcc detab.c -o detab.exe</pre>
 
-3. Run the program:
+3️⃣ Run the program:
 <pre>detab.exe</pre>
 
-4. Enter input and observe the detabbed output.<br><br><br>
+4️⃣ Enter input and observe the detabbed output.<br><br>
+
+
+### 🎯 Example Execution
+<pre>Enter the input...<br>
+Hello(\t)world!  This(\t)is(\t)an(\t)example.<br><br>
+
+The output :<br>
+Hello   world!  This    is      an      example.</pre><br><br>
 
 
 

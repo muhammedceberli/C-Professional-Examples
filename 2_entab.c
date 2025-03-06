@@ -9,7 +9,7 @@
 	
 	int main( int argc, char** argv )
 	{
-		char input[ ARRAY_SIZE ];	// Buffer to store the input string
+		char input[ ARRAY_SIZE ];		// Buffer to store the input string
 		bool isEOF = false;			// Flag to check if input reaches EOF
 		int len = 0;				// Stores length of the input
 		
@@ -50,8 +50,8 @@
 	{
 		int index = 0;			// Current position in the string
 		int shiftIndex = 0;		// Used for shifting characters left after inserting a tab
-		int postTabIndex = 0;	// Stores the position right after inserting a tab
-		int column = 1;	// Keeps track of the current column ( for tab stops )
+		int postTabIndex = 0;		// Stores the position right after inserting a tab
+		int column = 1;			// Keeps track of the current column ( for tab stops )
 		int spaceCount = 0;		// Number of consecutive spaces encountered
 			
 		while( text[ index ] != '\0' )
@@ -61,11 +61,11 @@
 				++spaceCount;
 				
 				// if spaces reach a tab stop, replace with a tab.
-				if(( spaceCount > 1 ) && !( column % TAB_SIZE ))
+				if( spaceCount && !( column % TAB_SIZE ))
 				{
 					
 					shiftIndex = index + 1;			// Start shifting from next character
-					index -= ( spaceCount - 1 );	// Move back to where tab will be placed
+					index -= ( spaceCount - 1 );		// Move back to where tab will be placed
 					text[ index++ ] = '\t';			// Insert tab
 					postTabIndex = index;			// Store position after tab
 					

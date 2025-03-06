@@ -70,10 +70,10 @@ The program consists of three key functions:<br>
 
 
 ### 🎯 Example Execution
-<pre>Enter the input...<br>
-Hello(\t)world!  This(\t)is(\t)an(\t)example.<br><br>
+<pre>Enter the input...
+Hello(\t)world!  This(\t)is(\t)an(\t)example.
 
-The output :<br>
+The output :
 Hello   world!  This    is      an      example.</pre><br><br>
 
 
@@ -132,8 +132,16 @@ The program consists of three key functions:<br>
 
 
 ### 🎯 Example Execution
-Input:<br>
-<pre>Hello      world!  This    is   an     example.</pre><br><br>
+<pre>Enter the input...
+Hello      world!  This    is   an     example.
+
+Original :
+Hello      world!  This    is   an     example.
+Length before entab: 47
+
+Entabbed:
+Hello(\t)   world!  This(\t)   is(\t)an     example.
+Length after entab: 43</pre><br><br>
 
 
 ## 🛠 Example_3 - 
